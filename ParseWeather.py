@@ -20,7 +20,7 @@ def ParseWeatherYandex(city):
     feels = list(soup.find('dt', 'term__label').contents) + t
 
     print(day[0] + '\n' + 'Температура сейчас: ' + (temperature[0]).replace('\u2212', '-'), end='\n')
-    print('Погода: %s' % weather_type[0], end=', ')
+    print(f'Погода: {weather_type[0]}', end=', ')
     print('%s %s' % (feels[0].lower(), feels[1].replace('\u2212', '-')))
 
 
